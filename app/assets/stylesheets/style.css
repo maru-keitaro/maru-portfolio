@@ -210,6 +210,10 @@
   color: red;
   text-align: center;
 }
+
+.login-flash-message {
+  color: red;
+}
 /* エラー文↑↑ */
 
 /* 検索機能↓↓ */

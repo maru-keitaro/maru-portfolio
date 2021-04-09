@@ -1,7 +1,7 @@
-ja:
-  time:
-    formats:
-      default: "%Y/%m/%d %H:%M"
+# ja:
+#   time:
+#     formats:
+#       default: "%Y/%m/%d %H:%M"
 ja:
  activerecord:
    attributes:
@@ -12,4 +12,7 @@ ja:
        place_id: どこで？
        set_time_id: 何分？
        image: 画像
-
+     time:
+       formats:
+         default: "%Y/%m/%d %H:%M:%S"
+         short: "%m/%d %H:%M"
