@@ -35,5 +35,5 @@
 | can_id  | references | foreign_key: true |
 
 ## Association
-belongs_to :user
-belongs_to :can
+- belongs_to :user
+- belongs_to :can

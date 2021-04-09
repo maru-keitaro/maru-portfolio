@@ -1,6 +1,6 @@
 <%= form_with model: @can, url: cans_path, method: :post, local: true do |f| %>
     
-    <%# <%= render 'shared/error_messages', model: f.object %>
+    <%= render 'shared/error_message', model: f.object %>
     
     <div class="can-box">
     <h2 class="can-plan">今日できたこと！！</h2>

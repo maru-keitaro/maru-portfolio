@@ -2,3 +2,14 @@ ja:
   time:
     formats:
       default: "%Y/%m/%d %H:%M"
+ja:
+ activerecord:
+   attributes:
+     user:
+       nickname: ニックネーム
+     can:
+       active_id: 何を？ 
+       place_id: どこで？
+       set_time_id: 何分？
+       image: 画像
+
