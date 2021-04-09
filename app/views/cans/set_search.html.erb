@@ -1,0 +1,9 @@
+<% if user_signed_in? %>
+  <div class="greeting">
+    ユーザー名:
+    <%= link_to "#{current_user.nickname}", user_path(current_user), class: :greeting_link %>さん
+  </div>
+<% end %>
+
+<%# 投稿表示 shared/_can.html.erb %>
+<%= render "shared/can" %>

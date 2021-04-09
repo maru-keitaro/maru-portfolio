@@ -1,0 +1,70 @@
+<div class="main">
+  <div class="detail-main">
+
+      <% if user_signed_in? && current_user.id == @can.user_id %>
+        <div class="can-edit-delete">
+          <%= link_to "編集", edit_can_path(@can.id), class: :can_edit %>
+          <%= link_to "削除", can_path(@can.id), class: :can_delete, method: :delete %>
+        </div>
+      <% end %>
+
+        <tr>
+          <th class="detail-can"></th>
+          <td class="detail-value"><%= image_tag @can.image, class: :can_image if @can.image.attached? %></td>
+        </tr>
+        
+    <table class="detail-table">
+      <tbody>
+        
+        <tr>
+          <th class="detail-can">投稿者</th>
+          <td class="detail-value"><%= @can.user.nickname %></td>
+        </tr>
+
+        <tr>
+          <th class="detail-can">何を</th>
+          <td class="detail-value"><%= @can.active.name %></td>
+        </tr>
+
+        <tr>
+          <th class="detail-can">場所</th>
+          <td class="detail-value"><%= @can.place.name %></td>
+        </tr>
+
+        <tr>
+          <th class="detail-can">時間</th>
+          <td class="detail-value"><%= @can.set_time.name %></td>
+        </tr>
+
+        <tr>
+          <th class="detail-can">メモ</th>
+          <td class="detail-value"><%= @can.description %></td>
+        </tr>
+
+        <tr>
+          <th class="detail-can">投稿日時</th>
+          <td class="detail-value"><%= l @can.created_at %></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="comments">
+    <% if user_signed_in? %>
+      <%= form_with model: [@can, @comment], local: true do |f| %>
+        <%= f.text_area :text, class:"text", placeholder: "コメント欄" %><br>
+        <%= f.submit "送信", class:"comment-btn"%>
+      <% end %>
+    <% else %>
+      <p>※コメントを投稿する場合ログインが必要です!※</p>
+    <% end %>
+    
+    <div class="comments-list">
+    <h3>コメント一覧</h3>
+      <% @comments.each do |comment| %>
+        🟢<%= comment.text %>
+        <p><%= comment.user.nickname %>さん</p><br>
+      <% end %>
+    </div>
+  </div>
+</div>
