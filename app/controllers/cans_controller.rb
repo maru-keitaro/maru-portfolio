@@ -14,7 +14,8 @@ class CansController < ApplicationController
 
   def create
     @can = Can.new(can_params)
-    if @can.save
+    if @can.valid?
+      @can.save
       redirect_to root_path
     else
       render :new
