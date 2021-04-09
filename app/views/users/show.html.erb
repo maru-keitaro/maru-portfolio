@@ -1,0 +1,13 @@
+<div class="main-top">
+  <p><%= @nickname %>さんの投稿一覧</p>
+  <% @cans.each do |can| %>
+    <div class="can">
+      <%= link_to image_tag(can.image, class: :can_img) if can.image.attached? %>
+      <div class="can_name">
+          <%= can.user.nickname %>さん
+          <div class="can_active">
+            -<%= can.active.name %>-
+          </div>
+     </div>
+  <% end %>
+</div>

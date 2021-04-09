@@ -1,0 +1,23 @@
+<%= form_with model: @can, url: cans_path, method: :post, local: true do |f| %>
+    
+    <%# <%= render 'shared/error_messages', model: f.object %>
+    
+    <div class="can-box">
+    <h2 class="can-plan">今日できたこと！！</h2>
+      何を？
+      <%= f.collection_select(:active_id, Active.all, :id, :name, {}, {class:"active-select"}) %>
+      どこで？
+      <%= f.collection_select(:place_id, Place.all, :id, :name, {}, {class:"place-select"}) %>
+      何分？
+      <%= f.collection_select(:set_time_id, SetTime.all, :id, :name, {}, {class:"set_time-select"}) %>
+      メモ書き
+      <%= f.text_area :description, class:"description", placeholder:"メモ" %>
+
+      <%= f.label :image, "画像アップロード", class: "image_btn" %>
+      <%= f.file_field :image, class:"image_form" %>
+
+      <%= f.submit "投稿する", class:"btn" %>
+
+    </div>
+    
+<% end %>

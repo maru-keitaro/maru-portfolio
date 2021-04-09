@@ -1,0 +1,21 @@
+<%= form_with model: @can, url: can_path, method: :patch, local: true do |f| %>
+    
+    <div class="can-box">
+    <h2 class="can-plan">編集しよう！！</h2>
+      何を？
+      <%= f.collection_select(:active_id, Active.all, :id, :name, {}, {class:"active-select"}) %>
+      どこで？
+      <%= f.collection_select(:place_id, Place.all, :id, :name, {}, {class:"place-select"}) %>
+      何分？
+      <%= f.collection_select(:set_time_id, SetTime.all, :id, :name, {}, {class:"set_time-select"}) %>
+      メモ書き
+      <%= f.text_area :description, class:"description", placeholder:"メモ" %>
+
+      <%= f.label :image, "画像アップロード", class: "image_btn" %> 
+      <%= f.file_field :image, class:"image_form" %> 
+
+      <%= f.submit "編集する", class:"btn" %>
+
+    </div>
+
+<% end %>
