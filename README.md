@@ -48,12 +48,12 @@ nicknameは6文字以内、パスワードは6文字以上でバリデーショ�
 (ログインユーザーのみ投稿が出来ます。Action Logリンクからトップページに戻れます)
 
 ## 投稿詳細表示機能
-[![Image from Gyazo](https://i.gyazo.com/84e429736d0cf5a116f6459b109f703a.gif)](https://gyazo.com/84e429736d0cf5a116f6459b109f703a)
+[![Image from Gyazo](https://i.gyazo.com/a3843190a67993d217a1d7ff0957313e.gif)](https://gyazo.com/a3843190a67993d217a1d7ff0957313e)
 投稿詳細表示機能では細かい詳細、日時を記載できるようにしました。日時も日本時間対応済みです。
 
 
 ## ログインユーザー詳細機能
-[![Image from Gyazo](https://i.gyazo.com/64ddb848c488ef1710e5b14a3c851f92.gif)](https://gyazo.com/64ddb848c488ef1710e5b14a3c851f92)
+[![Image from Gyazo](https://i.gyazo.com/66641d0bcd83d0f4fb4ce05a087c0c08.gif)](https://gyazo.com/66641d0bcd83d0f4fb4ce05a087c0c08)
 ログインユーザー詳細機能だは左上にログインユーザーのnicknameを記載しそちらから現在ログインしているユーザーの投稿一覧を表示することが出来ます。
 (ログインしていない場合はユーザー名は表示されません。Action Logリンクからトップページに戻れます)
 
@@ -75,7 +75,7 @@ nicknameは6文字以内、パスワードは6文字以上でバリデーショ�
 (Action Logリンクからトップページに戻れます)
 
 ## 投稿検索機能
-[![Image from Gyazo](https://i.gyazo.com/69ce7a03f17119e37e4b18eb51f12f10.gif)](https://gyazo.com/69ce7a03f17119e37e4b18eb51f12f10)
+[![Image from Gyazo](https://i.gyazo.com/dfe26efc793e685c1b1801cd6969a8a2.gif)](https://gyazo.com/dfe26efc793e685c1b1801cd6969a8a2)
 投稿検索機能ではカテゴリーを選択することによってそのカテゴリー別の投稿一覧が表示されるようになっています。
 (こちらはログアウトユーザーも検索可能になっています。)
 (Action Logリンクからトップページに戻れます)
