@@ -8,17 +8,17 @@ Action-log(アクションログ)
 # 本番環境
 ・URL : https://maru-portfolio-1.herokuapp.com/
 
-・Basic認証
+・Basic認証  
 ユーザー名 : action
 パスワード : 5599
 
 ・ログイン情報（テスト用）
 
-投稿済みユーザー
+投稿済みユーザー  
 メールアドレス : maru@exsample
 パスワード : km12345
 
-投稿済みではないユーザー
+投稿済みではないユーザー  
 メールアドレス : kei@exsample
 パスワード : km12345
 
@@ -30,67 +30,85 @@ Action-log(アクションログ)
 
 ## 新規登録
 [![Image from Gyazo](https://i.gyazo.com/6a0e1240b19fe0a42de3dbc2d2fa5520.gif)](https://gyazo.com/6a0e1240b19fe0a42de3dbc2d2fa5520)
-
+新規登録はgem deviseを使いシンプルにnickname,email,passwordのみで登録できるようにしています。
+nicknameは6文字以内、パスワードは6文字以上でバリデーションをかけています。
+エラー文は全て日本語対応できるように gem rails-i18nを導入し対応しています。
+(新規登録は右上のリンクから。Action Logリンクからトップページに戻れます)
 
 ## ログイン
-[![Image from Gyazo](https://i.gyazo.com/f639efd2265ff0af5df21bfc14408f17.gif)](https://gyazo.com/f639efd2265ff0af5df21bfc14408f17)
+
+ログインも同じくgem deviseを使っています。
+ログイン、ログアウトした場合、トップページのユーザー名下にflashで表示できるようしています。
+(ログインは右上のリンクから。Action Logリンクからトップページに戻れます)
 
 
 ## 投稿機能
 [![Image from Gyazo](https://i.gyazo.com/1a08c5ff252b72220ddbb31381b34bef.gif)](https://gyazo.com/1a08c5ff252b72220ddbb31381b34bef)
-
+投稿機能はActive Hashを使用し選択式にしています。メモ以外は選択必須になるのでエラー文を日本語で設定しております。
+画像はActive storageを使用。S3を使用し本番環境での保存も確認取れています。
+(ログインユーザーのみ投稿が出来ます。Action Logリンクからトップページに戻れます)
 
 ## 投稿詳細表示機能
 [![Image from Gyazo](https://i.gyazo.com/84e429736d0cf5a116f6459b109f703a.gif)](https://gyazo.com/84e429736d0cf5a116f6459b109f703a)
+投稿詳細表示機能では細かい詳細、日時を記載できるようにしました。日時も日本時間対応済みです。
 
 
 ## ログインユーザー詳細機能
 [![Image from Gyazo](https://i.gyazo.com/64ddb848c488ef1710e5b14a3c851f92.gif)](https://gyazo.com/64ddb848c488ef1710e5b14a3c851f92)
+ログインユーザー詳細機能だは左上にログインユーザーのnicknameを記載しそちらから現在ログインしているユーザーの投稿一覧を表示することが出来ます。
+(ログインしていない場合はユーザー名は表示されません。Action Logリンクからトップページに戻れます)
 
 
 ## 投稿編集機能
 [![Image from Gyazo](https://i.gyazo.com/9c829d07341a8b87ea59940c45fe4fa2.gif)](https://gyazo.com/9c829d07341a8b87ea59940c45fe4fa2)
-
+投稿編集機能ではログインユーザーかつ投稿者のみ表示、編集できるようにしています。urlからのアクセス制限も指定しているためログイン中でも投稿していない場合トップページに止まるように設定しております。
+(Action Logリンクからトップページに戻れます)
 
 ## 投稿削除機能
 [![Image from Gyazo](https://i.gyazo.com/008d98d4ad0717f1494ad33a4d99b7a8.gif)](https://gyazo.com/008d98d4ad0717f1494ad33a4d99b7a8)
-
+投稿削除機能こちらも編集と同様にログインユーザーかつ投稿者のみ表示、削除できるようにしています。
+(Action Logリンクからトップページに戻れます)
 
 ## コメント機能
 [![Image from Gyazo](https://i.gyazo.com/5958b906a90ae15b14f386b323064b6c.gif)](https://gyazo.com/5958b906a90ae15b14f386b323064b6c)
-
+コメント機能はログインユーザーのみコメントができるようになっています。
+ログアウトユーザーはコメント欄のところに ※コメントを投稿する場合ログインが必要です!※ と記載がされています。
+(Action Logリンクからトップページに戻れます)
 
 ## 投稿検索機能
 [![Image from Gyazo](https://i.gyazo.com/69ce7a03f17119e37e4b18eb51f12f10.gif)](https://gyazo.com/69ce7a03f17119e37e4b18eb51f12f10)
-
+投稿検索機能ではカテゴリーを選択することによってそのカテゴリー別の投稿一覧が表示されるようになっています。
+(こちらはログアウトユーザーも検索可能になっています。)
+(Action Logリンクからトップページに戻れます)
 
 # 工夫したポイント(開発環境)
 個人的にシンプルなものが好きなので特に複雑なCSSなどは使わず今まで学習してきたものを使っています。
 ユーザーのアクセス制限（ログインユーザーのみ閲覧可能、ログアウトユーザーはトップページに遷移されるなど）
 before_action、privateメソッドなども活用しています。実際の投稿アプリなどを見てみるとユーザーにアクセス制限を儲けているので本番での環境を意識し実装しました。
-投稿時にactive hashを使用し簡単に短時間で投稿できるように意識しています。
+投稿時にActive Hashを使用し簡単に短時間で投稿できるように意識しています。
 
 
 # 使用技術
-・バックエンド
+
+## バックエンド
 Ruby, Ruby on Rails
 
-・フロントエンド
+## フロントエンド
 Html, CSS
 
-・データベース
+## データベース
 MySQL, SequelPro
 
-・インフラ
+## インフラ
 AWS(S3) Active storage使用
 
-・ソースコード管理
+## ソースコード管理
 GitHub, GitHubDesktop
 
-・テスト
+## テスト
 RSpec　(モデル単体テスト)
 
-・エディタ
+## エディタ
 VSCode
 
 
