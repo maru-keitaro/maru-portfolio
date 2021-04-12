@@ -9,17 +9,16 @@ Action-log(アクションログ)
 ・URL : https://maru-portfolio-1.herokuapp.com/
 
 ・Basic認証  
-ユーザー名 : action
+ユーザー名 : action  
 パスワード : 5599
 
-・ログイン情報（テスト用）
-
+・ログイン情報（テスト用)  
 投稿済みユーザー  
-メールアドレス : maru@exsample
+メールアドレス : maru@exsample  
 パスワード : km12345
 
 投稿済みではないユーザー  
-メールアドレス : kei@exsample
+メールアドレス : kei@exsample  
 パスワード : km12345
 
 # 制作意図(背景)
