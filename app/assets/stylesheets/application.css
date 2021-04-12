@@ -25,8 +25,7 @@
 header{
   height: 150px;
   width: 100%;
-  /* background-image: radial-gradient(circle closest-side, white 0% 65%, transparent 65% 100%), repeating-linear-gradient(90deg, #f4c14e 0 4.8%, transparent 4.8% 9.6%); */
-  background-image:url(IMG_2350.JPG);
+  /* background-image:url(IMG_2350.JPG); */
   text-decoration-color:#FF0000;
   background-size: cover;
   display: flex;
@@ -35,17 +34,17 @@ header{
  }
 
 .header-title a {
-  color: red;
+  color: black;
   font-size: 30px;
   font-family: fantasy;
 }
 
 .header-title a:hover {
-  color: blue;
+  color: red;
 }
 
 .user_nav a {
-  color: blue;
+  color: black;
   font-size: 20px;
   margin-left: 15px;
   font-family: serif;
@@ -74,12 +73,4 @@ header{
   padding-top: 5px;
 }
 
-.apple-btn {
-  margin-right: 1vw;
-  height: 35px;
-}
-
-.google-btn {
-  height: 36px;
-}
 /* フッター↑↑ */
