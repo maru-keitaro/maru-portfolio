@@ -126,6 +126,7 @@ VSCode
 ## Association
 - has_many :cans
 - has_many :comments
+- has_many :likes
 
 
 # cans テーブル
@@ -141,6 +142,7 @@ VSCode
 ## Association
 - belongs_to :user
 - has_many :comments
+- has_many :likes
 
 
 # comments テーブル
@@ -148,6 +150,18 @@ VSCode
 | Column  | Type       | Options           |
 | ------- | ---------- | ----------------- |
 | text    | text       | null: false       |
+| user_id | references | foreign_key: true |
+| can_id  | references | foreign_key: true |
+
+## Association
+- belongs_to :user
+- belongs_to :can
+
+
+# likes テーブル
+
+| Column  | Type       | Options           |
+| ------- | ---------- | ----------------- |
 | user_id | references | foreign_key: true |
 | can_id  | references | foreign_key: true |
 

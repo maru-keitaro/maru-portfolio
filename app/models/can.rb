@@ -15,6 +15,7 @@ class Can < ApplicationRecord
 
   belongs_to :user
   has_many :comments, dependent: :destroy   #外部キーを持つデータのdestroyを行うための設定
+  has_many :likes, dependent: :destroy
   has_one_attached :image
 
 end

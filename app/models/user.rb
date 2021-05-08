@@ -6,6 +6,11 @@ class User < ApplicationRecord
          
   has_many :cans, dependent: :destroy   #外部キーを持つデータのdestroyを行うための設定
   has_many :comments, dependent: :destroy   #外部キーを持つデータのdestroyを行うための設定
+  has_many :likes, dependent: :destroy
 
   validates :nickname, presence: true, length: { maximum: 6 }
+
+  def already_liked?(can)
+    self.likes.exists?(can_id: can.id)
+  end
 end
