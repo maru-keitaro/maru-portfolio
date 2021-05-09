@@ -45,7 +45,7 @@ nicknameは6文字以内、パスワードは6文字以上でバリデーショ�
 [![Image from Gyazo](https://i.gyazo.com/1a08c5ff252b72220ddbb31381b34bef.gif)](https://gyazo.com/1a08c5ff252b72220ddbb31381b34bef)
 投稿機能はActive Hashを使用し選択式にしています。メモ以外は選択必須になるのでエラー文を日本語で設定しております。
 画像はActive storageを使用。S3を使用し本番環境での保存も確認取れています。
-(ログインユーザーのみ投稿が出来ます。Action Logリンクからトップページに戻れます)
+(ログインユーザーのみ投稿が出来ます。)
 
 ## 投稿詳細表示機能
 [![Image from Gyazo](https://i.gyazo.com/a3843190a67993d217a1d7ff0957313e.gif)](https://gyazo.com/a3843190a67993d217a1d7ff0957313e)
@@ -55,30 +55,34 @@ nicknameは6文字以内、パスワードは6文字以上でバリデーショ�
 ## ログインユーザー詳細機能
 [![Image from Gyazo](https://i.gyazo.com/66641d0bcd83d0f4fb4ce05a087c0c08.gif)](https://gyazo.com/66641d0bcd83d0f4fb4ce05a087c0c08)
 ログインユーザー詳細機能だは左上にログインユーザーのnicknameを記載しそちらから現在ログインしているユーザーの投稿一覧を表示することが出来ます。
-(ログインしていない場合はユーザー名は表示されません。Action Logリンクからトップページに戻れます)
+(ログインしていない場合はユーザー名は表示されません。)
 
 
 ## 投稿編集機能
 [![Image from Gyazo](https://i.gyazo.com/9c829d07341a8b87ea59940c45fe4fa2.gif)](https://gyazo.com/9c829d07341a8b87ea59940c45fe4fa2)
 投稿編集機能ではログインユーザーかつ投稿者のみ表示、編集できるようにしています。urlからのアクセス制限も指定しているためログイン中でも投稿していない場合トップページに止まるように設定しております。
-(Action Logリンクからトップページに戻れます)
+
 
 ## 投稿削除機能
 [![Image from Gyazo](https://i.gyazo.com/008d98d4ad0717f1494ad33a4d99b7a8.gif)](https://gyazo.com/008d98d4ad0717f1494ad33a4d99b7a8)
 投稿削除機能こちらも編集と同様にログインユーザーかつ投稿者のみ表示、削除できるようにしています。
-(Action Logリンクからトップページに戻れます)
+
 
 ## コメント機能
 [![Image from Gyazo](https://i.gyazo.com/5958b906a90ae15b14f386b323064b6c.gif)](https://gyazo.com/5958b906a90ae15b14f386b323064b6c)
 コメント機能はログインユーザーのみコメントができるようになっています。
 ログアウトユーザーはコメント欄のところに ※コメントを投稿する場合ログインが必要です!※ と記載がされています。
-(Action Logリンクからトップページに戻れます)
+
 
 ## 投稿検索機能
 [![Image from Gyazo](https://i.gyazo.com/dfe26efc793e685c1b1801cd6969a8a2.gif)](https://gyazo.com/dfe26efc793e685c1b1801cd6969a8a2)
 投稿検索機能ではカテゴリーを選択することによってそのカテゴリー別の投稿一覧が表示されるようになっています。
 (こちらはログアウトユーザーも検索可能になっています。)
-(Action Logリンクからトップページに戻れます)
+
+
+## いいね機能
+
+いいね機能ではハートのアイコンをクリックするといいねの数がカウントできるようになっています。(ログインユーザーのみいいねができるようになっています。Font Awesomeを使用)
 
 # 工夫したポイント(開発環境)
 個人的にシンプルなものが好きなので特に複雑なCSSなどは使わず今まで学習してきたものを使っています。
@@ -112,7 +116,7 @@ VSCode
 
 
 # ER図
-[![Image from Gyazo](https://i.gyazo.com/80fb7999b121033e7b28bb2090ed75a7.png)](https://gyazo.com/80fb7999b121033e7b28bb2090ed75a7)
+[![Image from Gyazo](https://i.gyazo.com/19af92f5b707253af8bf32fffb6e78a0.png)](https://gyazo.com/19af92f5b707253af8bf32fffb6e78a0)
 
 
 # users テーブル
