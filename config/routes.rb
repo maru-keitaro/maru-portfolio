@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: 'cans#index'
   resources :cans do
     resources :comments, only: :create
-    resources :likes, only: [:create, :destroy]
+    resource :likes, only: [:create, :destroy]
     collection do
       get 'set_search'
     end

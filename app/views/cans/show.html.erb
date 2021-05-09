@@ -47,6 +47,17 @@
         </tr>
       </tbody>
     </table>
+
+    <% if current_user.already_liked?(@can) %>
+      <%= link_to can_likes_path(@can), method: :delete do %>
+      <i class="fas fa-heart"></i>
+      <% end %>
+    <% else %>
+      <%= link_to can_likes_path(@can), method: :post do %>
+      <i class="far fa-heart"></i>
+      <% end %>
+    <% end %>
+    <%= @can.likes.count %>
   </div>
 
   <div class="comments">

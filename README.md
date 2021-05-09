@@ -105,7 +105,7 @@ AWS(S3) Active storage使用
 GitHub, GitHubDesktop
 
 ## テスト
-RSpec　(モデル単体テスト)
+RSpec (モデル単体テスト)
 
 ## エディタ
 VSCode
