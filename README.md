@@ -147,7 +147,8 @@ VSCode
 - belongs_to :user
 - has_many :comments
 - has_many :likes
-
+- has_many :followers, class_name: 'Relationship'
+- has_many :followers, class_name: 'Relationship'
 
 # comments テーブル
 
@@ -172,3 +173,15 @@ VSCode
 ## Association
 - belongs_to :user
 - belongs_to :can
+
+
+# relationships テーブル
+
+| Column      | Type       | Options                         |
+| ----------- | ---------- | ------------------------------- |
+| user_id | references | null: false, foreign_key: false |
+| target_id | references | null: false, foreign_key: false |
+
+## Association
+- belongs_to :follower, class_name: 'User'
+- belongs_to :followed, class_name: 'User'

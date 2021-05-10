@@ -4,21 +4,26 @@
     <div class="can">
       <%= link_to image_tag(can.image, class: :can_img), can_path(can.id) if can.image.attached? %>
       <div class="can_name">
-          <%= can.user.nickname %>さん
+      <% if user_signed_in? %>
+        <%= link_to "#{can.user.nickname}", user_path(can.user), class: :greeting_link %>さん
+      <% else %>
+        <%= can.user.nickname %>
+      <% end %>
+
           <div class="can_active">
             -<%= can.active.name %>-
           </div>
       </div>
       <% if current_user %>
-      <% if current_user.already_liked?(can) %>
-        <%= link_to can_likes_path(can), method: :delete do %>
-          <i class="fas fa-heart"></i>
+        <% if current_user.already_liked?(can) %>
+          <%= link_to can_likes_path(can), method: :delete do %>
+            <i class="fas fa-heart"></i>
+          <% end %>
+        <% else %>
+          <%= link_to can_likes_path(can), method: :post do %>
+            <i class="far fa-heart"></i>
+          <% end %>
         <% end %>
-      <% else %>
-        <%= link_to can_likes_path(can), method: :post do %>
-          <i class="far fa-heart"></i>
-        <% end %>
-      <% end %>
       <% end %>
       <%= can.likes.count %>
     </div>

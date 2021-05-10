@@ -8,5 +8,10 @@ Rails.application.routes.draw do
       get 'set_search'
     end
   end
-  resources :users, only: :show
+
+  resources :users, only: :show do
+    resource :relationship, only: [:create, :destroy]
+    resources :followings, only: :index
+    resources :followers, only: :index
+  end
 end
