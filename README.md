@@ -123,8 +123,7 @@ VSCode
 
 
 # ER図
-[![Image from Gyazo](https://i.gyazo.com/19af92f5b707253af8bf32fffb6e78a0.png)](https://gyazo.com/19af92f5b707253af8bf32fffb6e78a0)
-
+[![Image from Gyazo](https://i.gyazo.com/26be456fa2c7040a4db0424e5497a78d.png)](https://gyazo.com/26be456fa2c7040a4db0424e5497a78d)
 
 # users テーブル
 
@@ -188,9 +187,9 @@ VSCode
 
 | Column      | Type       | Options                         |
 | ----------- | ---------- | ------------------------------- |
-| user_id | references | null: false, foreign_key: false |
-| target_id | references | null: false, foreign_key: false |
+| user_id     | references | null: false, foreign_key: false |
+| target_id   | references | null: false, foreign_key: false |
 
 ## Association
 - belongs_to :user
-- belongs_to :target_user
+- 
