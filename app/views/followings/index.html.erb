@@ -1,5 +1,8 @@
-<% @followings.each do |user| %>
- <div>
-   <%= link_to user.email, [user] %>
- </div>
-<% end %>
+<div class="followings-top">
+  <h1>フォロー一覧</h1>
+  <% @followings.each do |user| %>
+  <div>
+    ・<%= link_to user.nickname, [user], class: :followings %>
+  </div>
+  <% end %>
+</div>

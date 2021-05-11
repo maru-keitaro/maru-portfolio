@@ -168,8 +168,14 @@
   width: 700px;
   height: 400px;
   object-fit: cover;
-  margin-bottom: 20px;
+  margin-bottom: 130px;
 }
+
+.main-follow {
+  margin-bottom: 30px;
+  
+}
+
 /* 詳細ページ↑↑ */
 
 /* コメント↓↓ */
@@ -242,3 +248,23 @@
   outline: none
 }
 /* 検索機能↑↑ */
+
+/* フォロー機能 */
+
+.followings-top {
+  background: -moz-linear-gradient(top, #FFF, #FFC778 30%, #F89174 60%, #748af8);
+  background: -webkit-linear-gradient(top, #FFF, #FFC778 30%, #F89174 60%, #748af8);
+  background: linear-gradient(to bottom, #FFF, #FFC778 30%, #F89174 60%, #748af8);
+  height: 100vh;
+  text-align: center;
+  font-size: 30px;
+} 
+
+.followers-top {
+  background: -moz-linear-gradient(top, #FFF, #FFC778 30%, #F89174 60%, #748af8);
+  background: -webkit-linear-gradient(top, #FFF, #FFC778 30%, #F89174 60%, #748af8);
+  background: linear-gradient(to bottom, #FFF, #FFC778 30%, #F89174 60%, #748af8);
+  height: 100vh;
+  text-align: center;
+  font-size: 30px;
+}

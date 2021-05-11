@@ -1,17 +1,21 @@
 <div class="main-top">
-  <% if user_signed_in? && current_user != @user %>
-    <% if current_user.active_relationships.exists?(target_user_id: @user.id) %>
-      <%= link_to 'フォロー解除', [@user, :relationship], method: :delete %>
-    <% else %>
-      <%= link_to 'フォローする', [@user, :relationship], method: :post %>
+  <div class="main-follow">
+    <% if user_signed_in? && current_user != @user %>
+      <% if current_user.active_relationships.exists?(target_user_id: @user.id) %>
+        <%= link_to 'フォロー解除', [@user, :relationship], method: :delete %>
+      <% else %>
+        <%= link_to 'フォローする', [@user, :relationship], method: :post %>
+      <% end %>
     <% end %>
-  <% end %>
 
-  <div>
-    <%= link_to 'フォロー',  [@user, :followings] %>
-  </div>
-  <div>
-    <%= link_to 'フォロワー',  [@user, :followers] %>
+    <div>
+      <%= link_to 'フォロー',  [@user, :followings] %>
+      <%= @user.followings.count %>
+    </div>
+    <div>
+      <%= link_to 'フォロワー',  [@user, :followers] %>
+      <%= @user.followers.count %>
+    </div>
   </div>
 
   <p><%= @nickname %>さんの投稿一覧</p>
