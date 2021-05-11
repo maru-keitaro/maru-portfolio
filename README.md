@@ -138,6 +138,10 @@ VSCode
 - has_many :cans
 - has_many :comments
 - has_many :likes
+- has_many :active_relationships
+- has_many :passive_relationships
+- has_many :followings
+- has_many :followers
 
 
 # cans テーブル
@@ -154,8 +158,6 @@ VSCode
 - belongs_to :user
 - has_many :comments
 - has_many :likes
-- has_many :followers, class_name: 'Relationship'
-- has_many :followers, class_name: 'Relationship'
 
 # comments テーブル
 
@@ -190,5 +192,5 @@ VSCode
 | target_id | references | null: false, foreign_key: false |
 
 ## Association
-- belongs_to :follower, class_name: 'User'
-- belongs_to :followed, class_name: 'User'
+- belongs_to :user
+- belongs_to :target_user
